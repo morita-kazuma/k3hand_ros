@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<robot name="myfirst">
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/</robotNamespace>
+    </plugin>
+  </gazebo>
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <cylinder length="0.06" radius="0.025" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.06" radius="0.025" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <link name="link_fin1_1">
+    <visual>
+      <geometry>
+        <box size="0.0225 0.035 0.012" />
+      </geometry>
+      <origin xyz="0.0 0.015 0.0" />
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.0225 0.035 0.012" />
+      </geometry>
+      <origin xyz="0.0 0.015 0.0" />
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <link name="link_fin1_2">
+    <visual>
+      <geometry>
+        <box size="0.0225 0.045 0.012" />
+      </geometry>
+      <origin xyz="0.0 0.0175 0.0" />
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.0225 0.045 0.012" />
+      </geometry>
+      <origin xyz="0.0 0.0175 0.0" />
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <link name="link_fin1_3">
+    <visual>
+      <geometry>
+        <box size="0.0225 0.045 0.012" />
+      </geometry>
+      <origin xyz="0.0 0.0175 0.0" />
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.0225 0.045 0.012" />
+      </geometry>
+      <origin xyz="0.0 0.0175 0.0" />
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+
+
+  <link name="link_fin1_4">
+    <visual>
+      <geometry>
+        <box size="0.0225 0.040 0.012" />
+      </geometry>
+      <origin xyz="0.0 0.015 0.0" />
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.0225 0.040 0.012" />
+      </geometry>
+      <origin xyz="0.0 0.015 0.0" />
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+ 
+  <link name="link_fin2_1">
+    <visual>
+      <geometry>
+        <box size="0.020 0.030 0.012" />
+      </geometry>
+      <origin xyz="-0.005 -0.010 0.0" />
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.020 0.030 0.012" />
+      </geometry>
+      <origin xyz="-0.005 -0.010 0.0" />
+    </collision>
+
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <link name="link_fin2_2">
+    <visual>
+      <geometry>
+        <box size="0.020 0.120 0.012" />
+      </geometry>
+      <origin xyz="0.005 -0.050 0.0" />
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.020 0.120 0.012" />
+      </geometry>
+      <origin xyz="0.005 -0.050 0.0" />
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+
+  <link name="link_fin3_1">
+    <visual>
+      <geometry>
+        <box size="0.020 0.030 0.012" />
+      </geometry>
+      <origin xyz="0.005 -0.010 0.0" />
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.020 0.030 0.012" />
+      </geometry>
+      <origin xyz="0.005 -0.010 0.0" />
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <link name="link_fin3_2">
+    <visual>
+      <geometry>
+        <box size="0.020 0.120 0.012" />
+      </geometry>
+      <origin xyz="-0.005 -0.050 0.0" />
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.020 0.120 0.012" />
+      </geometry>
+      <origin xyz="-0.005 -0.050 0.0" />
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <joint name="joint0" type="revolute">
+    <axis xyz="0.0 0.0 1.0" />
+    <parent link="base_link" />
+    <child link="link_fin2_1" />
+    <origin xyz="0.020 -0.015 0.020" rpy="0.0 0.0 1.570796" />
+    <limit lower="-1.570796" upper="0.523599" effort="0.0" velocity="0.0" />
+  </joint>  
+  <joint name="joint1" type="revolute">
+    <axis xyz="1.0 0.0 0" />
+    <parent link="link_fin2_1" />
+    <child link="link_fin2_2" />
+    <origin xyz="0.000 -0.020 0.0" rpy="-1.570796 0.0 0.0" />
+    <limit lower="-1.570796" upper="1.579796" effort="0.0" velocity="0.0" />
+  </joint>
+  <joint name="joint2" type="revolute">
+    <axis xyz="0.0 0.0 1.0" />
+    <parent link="base_link" />
+    <child link="link_fin3_1" />
+    <origin xyz="-0.020 -0.015 0.020" rpy="0.0 0.0 -1.570796" />
+    <limit lower="-0.523599" upper="1.570796" effort="0.0" velocity="0.0" />
+  </joint>
+  <joint name="joint3" type="revolute">
+    <axis xyz="-1.0 0.0 0" />
+    <parent link="link_fin3_1" />
+    <child link="link_fin3_2" />
+    <origin xyz="0.000 -0.020 0.0" rpy="-1.570796 0.0 0.0" />
+    <limit lower="-1.570796" upper="1.570796" effort="0.0" velocity="0.0" />
+  </joint>
+  <joint name="joint4" type="revolute">
+    <axis xyz="0.0 0 -1" />
+    <parent link="base_link" />
+    <child link="link_fin1_1" />
+    <origin rpy="0.78537 0 0" xyz="0 0.02 0" />
+    <limit lower="-1.570796" upper="1.570796" effort="30.0" velocity="1.0" />
+  </joint>
+  <transmission name="joint_fin1_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="$joint_fin1_1_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="joint4">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <joint name="joint5" type="revolute">
+    <axis xyz="1 0.0 0.0" />
+    <parent link="link_fin1_1" />
+    <child link="link_fin1_2" />
+    <origin rpy="-0.78537 0 0" xyz="0 0.0275 0" />
+    <limit lower="-0.8726646" upper="2.268928" effort="0.0" velocity="0.0" />
+  </joint>
+  <joint name="joint6" type="revolute">
+    <axis xyz="1 0.0 0.0" />
+    <parent link="link_fin1_2" />
+    <child link="link_fin1_3" />
+    <origin rpy="0 0 0" xyz="0 0.035 0" />
+    <limit lower="-1.570796" upper="1.570796" effort="0.0" velocity="0.0" />
+  </joint>  
+  <joint name="joint7" type="revolute">
+    <axis xyz="1 0.0 0.0" />
+    <parent link="link_fin1_3" />
+    <child link="link_fin1_4" />
+    <origin rpy="0 0 0" xyz="0 0.035 0" />
+    <limit lower="-1.570796" upper="1.570796" effort="0.0" velocity="0.0" />
+  </joint>
+
+</robot>

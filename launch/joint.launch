@@ -1,0 +1,26 @@
+<launch>
+  <!-- 引数 -->
+  <arg name="model" default="$(find k3hand_ros)/urdf/k3hand.urdf"/>
+  <arg name="rvizconfig" default="$(find k3hand_ros)/rviz/urdf.rviz" />
+
+
+  <!-- Gazeboの起動 -->
+  <include file="$(find k3hand_ros)/launch/gazebo.launch">
+    <arg name="model" value="$(arg model)" />
+  </include>
+
+  <!-- rvizの起動 -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" />
+
+  <!-- JointStateControllerをパラメータに読み込み -->
+  <rosparam command="load"
+      file="$(find k3hand_ros)/config/joints.yaml"
+      ns="k3hand_joint_state_controller" />
+  <rosparam command="load"
+            file="$(find k3hand_ros)/config/finger.yaml"
+            ns="k3hand_finger_controller" />
+
+  <!-- JointStateControllerの実行 -->
+  <node name="k3hand_controller_spawner" pkg="controller_manager" type="spawner"
+      args="k3hand_joint_state_controller k3hand_finger_controller --shutdown-timeout 3"/>
+</launch>
