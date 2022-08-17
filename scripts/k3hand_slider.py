@@ -42,8 +42,9 @@ def callback(data):
 
 def listener():
     global k3
-
+    rospy.init_node("control_slider", anonymous=True)
     port = rospy.get_param("~port", "/dev/ttyUSB0")#port のdefault値のjoint_s設定
+    #port = rospy.get_param("~port")#port のdefault値のjoint_s設定    
     baud = rospy.get_param("~baud", 115200)
     print(port, baud)
     k3 = k3hand(port)
@@ -54,7 +55,7 @@ def listener():
     print("enabled")
 #    print(k3.speeds)
  
-    rospy.init_node("control_slider", anonymous=True)
+
 #    r = rospy.Rate(5)
     while not rospy.is_shutdown():
         if not last_data is None:
