@@ -7,14 +7,14 @@
   <link name="base_link">
     <visual>
       <geometry>
-        <mesh filename="package://mycobot_description/urdf/320_urdf/base.dae"/>
+        <mesh filename="package://k3hand_ros/urdf/320_urdf/base.dae" />
       </geometry>
-      <origin xyz = "0 0 0 " rpy = " 0 0 0"/>
+      <origin xyz="0 0 0 " rpy=" 0 0 0" />
     </visual>
     <collision>
-      <origin xyz = "0 0 0.05 " rpy = " 0 0 0"/>
+      <origin xyz="0 0 0.05 " rpy=" 0 0 0" />
       <geometry>
-        <cylinder length="0.102" radius="0.0725"/>
+        <cylinder length="0.102" radius="0.0725" />
       </geometry>
     </collision>
   </link>
@@ -22,14 +22,14 @@
   <link name="link1">
     <visual>
       <geometry>
-        <mesh filename="package://mycobot_description/urdf/320_urdf/link1.dae"/>
+        <mesh filename="package://mycobot_description/urdf/320_urdf/link1.dae" />
       </geometry>
-      <origin xyz = "0 0 0 " rpy = " 0 0 0"/>
+      <origin xyz="0 0 0 " rpy=" 0 0 0" />
     </visual>
     <collision>
-      <origin xyz = "0 0 -0.02 " rpy = " 0 0 0"/>
+      <origin xyz="0 0 -0.02 " rpy=" 0 0 0" />
       <geometry>
-        <cylinder length="0.106" radius="0.043"/>
+        <cylinder length="0.106" radius="0.043" />
       </geometry>
     </collision>
   </link>
@@ -38,14 +38,14 @@
   <link name="link2">
     <visual>
       <geometry>
-        <mesh filename="package://mycobot_description/urdf/320_urdf/link2.dae"/>
+        <mesh filename="package://mycobot_description/urdf/320_urdf/link2.dae" />
       </geometry>
-      <origin xyz = "0 0 0.0587 " rpy = " 0 0 3.1415926"/>
+      <origin xyz="0 0 0.0587 " rpy=" 0 0 3.1415926" />
     </visual>
     <collision>
-      <origin xyz = "0.07 0 0.095 " rpy = " 0 -1.5708 0"/>
+      <origin xyz="0.07 0 0.095 " rpy=" 0 -1.5708 0" />
       <geometry>
-        <cylinder length="0.18" radius="0.036"/>
+        <cylinder length="0.18" radius="0.036" />
       </geometry>
     </collision>
   </link>
@@ -54,31 +54,30 @@
   <link name="link3">
     <visual>
       <geometry>
-        <mesh filename="package://mycobot_description/urdf/320_urdf/link3.dae"/>
+        <mesh filename="package://mycobot_description/urdf/320_urdf/link3.dae" />
       </geometry>
-      <origin xyz = "0 0 0.038 " rpy = " 0 0 3.1415926"/>
+      <origin xyz="0 0 0.038 " rpy=" 0 0 3.1415926" />
     </visual>
     <collision>
-      <origin xyz = "0.044 0 0 " rpy = " 0 -1.5708 0"/>
+      <origin xyz="0.044 0 0 " rpy=" 0 -1.5708 0" />
       <geometry>
-        <cylinder length="0.14" radius="0.0305"/>
+        <cylinder length="0.14" radius="0.0305" />
       </geometry>
     </collision>
   </link>
 
 
-
   <link name="link4">
     <visual>
       <geometry>
-        <mesh filename="package://mycobot_description/urdf/320_urdf/link4.dae"/>
+        <mesh filename="package://mycobot_description/urdf/320_urdf/link4.dae" />
       </geometry>
-      <origin xyz = "0 -0.001 0 " rpy = " 0 0 0"/>
+      <origin xyz="0 -0.001 0 " rpy=" 0 0 0" />
     </visual>
     <collision>
-      <origin xyz = "0.0 -0.014 0 " rpy = " 0 -1.5708 1.5708"/>
+      <origin xyz="0.0 -0.014 0 " rpy=" 0 -1.5708 1.5708" />
       <geometry>
-        <cylinder length="0.083" radius="0.029"/>
+        <cylinder length="0.083" radius="0.029" />
       </geometry>
     </collision>
   </link>
@@ -87,14 +86,14 @@
   <link name="link5">
     <visual>
       <geometry>
-        <mesh filename="package://mycobot_description/urdf/320_urdf/link5.dae"/>
+        <mesh filename="package://mycobot_description/urdf/320_urdf/link5.dae" />
       </geometry>
-      <origin xyz = "0 0.002  0 " rpy = " 0  0 3.1415926"/>
+      <origin xyz="0 0.002  0 " rpy=" 0  0 3.1415926" />
     </visual>
     <collision>
-      <origin xyz = "0 -0.01 0 " rpy = " 1.5708 1.5708 0"/>
+      <origin xyz="0 -0.01 0 " rpy=" 1.5708 1.5708 0" />
       <geometry>
-        <cylinder length="0.0849" radius="0.029"/>
+        <cylinder length="0.0849" radius="0.029" />
       </geometry>
     </collision>
   </link>
@@ -102,69 +101,69 @@
   <link name="link6">
     <visual>
       <geometry>
-        <cylinder length="0.02" radius="0.026"/>
+        <cylinder length="0.02" radius="0.026" />
       </geometry>
-      <material name = "grey">
-        <color rgba = "0.5 0.5 0.5 1"/>
+      <material name="grey">
+        <color rgba="0.5 0.5 0.5 1" />
       </material>
-      <origin xyz = "0 0 -0.01 " rpy = " 0 0 0"/>
+      <origin xyz="0 0 -0.01 " rpy=" 0 0 0" />
     </visual>
     <collision>
-      <origin xyz = "0.0 0 -0.01 " rpy = " 0 0 0"/>
+      <origin xyz="0.0 0 -0.01 " rpy=" 0 0 0" />
       <geometry>
-        <cylinder length="0.0225" radius="0.026"/>
+        <cylinder length="0.0225" radius="0.026" />
       </geometry>
     </collision>
   </link>
 
   <joint name="joint2_to_joint1" type="revolute">
-    <axis xyz="0 0 1"/>
-    <limit effort = "1000.0" lower = "-3.14" upper = "3.14159" velocity = "0"/>
-    <parent link="base_link"/>
-    <child link="link1"/>
-    <origin xyz= "0 0 0.17846" rpy = "0 0 0"/>
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" lower="-3.14" upper="3.14159" velocity="0" />
+    <parent link="base_link" />
+    <child link="link1" />
+    <origin xyz="0 0 0.17846" rpy="0 0 0" />
   </joint>
 
 
   <joint name="joint3_to_joint2" type="revolute">
-    <axis xyz="0 0 1"/>
-    <limit effort = "1000.0" lower = "-3.14" upper = "3.14159" velocity = "0"/>
-    <parent link="link1"/>
-    <child link="link2"/>
-    <origin xyz= "0 0  0" rpy = "0 -1.57080  1.57080"/>
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" lower="-3.14" upper="3.14159" velocity="0" />
+    <parent link="link1" />
+    <child link="link2" />
+    <origin xyz="0 0  0" rpy="0 -1.57080  1.57080" />
   </joint>
 
 
   <joint name="joint4_to_joint3" type="revolute">
-    <axis xyz=" 0 0 1"/>
-    <limit effort = "1000.0" lower = "-3.14" upper = "3.14159" velocity = "0"/>
-    <parent link="link2"/>
-    <child link="link3"/>
-    <origin xyz= "0.13635 0 0   " rpy = "0 0 0"/>
+    <axis xyz=" 0 0 1" />
+    <limit effort="1000.0" lower="-3.14" upper="3.14159" velocity="0" />
+    <parent link="link2" />
+    <child link="link3" />
+    <origin xyz="0.13635 0 0   " rpy="0 0 0" />
   </joint>
 
   <joint name="joint5_to_joint4" type="revolute">
-    <axis xyz=" 0 0 1"/>
-    <limit effort = "1000.0" lower = "-3.14" upper = "3.14159" velocity = "0"/>
-    <parent link="link3"/>
-    <child link="link4"/>
-    <origin xyz= "0.1 0  0.090" rpy = "0 0 1.57080"/>
+    <axis xyz=" 0 0 1" />
+    <limit effort="1000.0" lower="-3.14" upper="3.14159" velocity="0" />
+    <parent link="link3" />
+    <child link="link4" />
+    <origin xyz="0.1 0  0.090" rpy="0 0 1.57080" />
   </joint>
 
   <joint name="joint6_to_joint5" type="revolute">
-    <axis xyz="0 0 1"/>
-    <limit effort = "1000.0" lower = "-3.14" upper = "3.14159" velocity = "0"/>
-    <parent link="link4"/>
-    <child link="link5"/>
-    <origin xyz= "0 -0.08515 0" rpy = "1.57080 -1.57080 0"/>
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" lower="-3.14" upper="3.14159" velocity="0" />
+    <parent link="link4" />
+    <child link="link5" />
+    <origin xyz="0 -0.08515 0" rpy="1.57080 -1.57080 0" />
   </joint>
 
   <joint name="joint6output_to_joint6" type="revolute">
-    <axis xyz="0 0 1"/>
-    <limit effort = "1000.0" lower = "-3.14" upper = "3.14159" velocity = "0"/>
-    <parent link="link5"/>
-    <child link="link6"/>
-    <origin xyz= "0 0.06 0" rpy = "-1.57080 0 0 "/>
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" lower="-3.14" upper="3.14159" velocity="0" />
+    <parent link="link5" />
+    <child link="link6" />
+    <origin xyz="0 0.06 0" rpy="-1.57080 0 0 " />
   </joint>
 
   <link name="palm">
@@ -179,15 +178,15 @@
       </geometry>
     </collision>
     <inertial>
-      <mass value="10"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <mass value="10" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
     </inertial>
   </link>
   <joint name="joint6_to_hand" type="fixed">
-  <parent link="link6"/>
-  <child link="palm"/>
-  <origin xyz="0 0 0"/>
-  </joint>  
+    <parent link="link6" />
+    <child link="palm" />
+    <origin xyz="0 0 0" />
+  </joint>
   <link name="link_fin1_1">
     <visual>
       <geometry>
@@ -202,8 +201,8 @@
       <origin xyz="0.0 0.015 0.0" />
     </collision>
     <inertial>
-      <mass value="10"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <mass value="10" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
     </inertial>
   </link>
   <link name="link_fin1_2">
@@ -220,8 +219,8 @@
       <origin xyz="0.0 0.0175 0.0" />
     </collision>
     <inertial>
-      <mass value="10"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <mass value="10" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
     </inertial>
   </link>
   <link name="link_fin1_3">
@@ -238,8 +237,8 @@
       <origin xyz="0.0 0.0175 0.0" />
     </collision>
     <inertial>
-      <mass value="10"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <mass value="10" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
     </inertial>
   </link>
 
@@ -258,11 +257,11 @@
       <origin xyz="0.0 0.015 0.0" />
     </collision>
     <inertial>
-      <mass value="10"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <mass value="10" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
     </inertial>
   </link>
- 
+
   <link name="link_fin2_1">
     <visual>
       <geometry>
@@ -278,8 +277,8 @@
     </collision>
 
     <inertial>
-      <mass value="10"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <mass value="10" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
     </inertial>
   </link>
   <link name="link_fin2_2">
@@ -296,8 +295,8 @@
       <origin xyz="0.005 -0.050 0.0" />
     </collision>
     <inertial>
-      <mass value="10"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <mass value="10" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
     </inertial>
   </link>
 
@@ -315,8 +314,8 @@
       <origin xyz="0.005 -0.010 0.0" />
     </collision>
     <inertial>
-      <mass value="10"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <mass value="10" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
     </inertial>
   </link>
   <link name="link_fin3_2">
@@ -333,8 +332,8 @@
       <origin xyz="-0.005 -0.050 0.0" />
     </collision>
     <inertial>
-      <mass value="10"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <mass value="10" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
     </inertial>
   </link>
   <joint name="joint0" type="revolute">
@@ -343,7 +342,7 @@
     <child link="link_fin2_1" />
     <origin xyz="0.020 -0.015 0.020" rpy="0.0 0.0 1.570796" />
     <limit lower="-1.570796" upper="0.523599" effort="0.0" velocity="0.0" />
-  </joint>  
+  </joint>
   <joint name="joint1" type="revolute">
     <axis xyz="1.0 0.0 0" />
     <parent link="link_fin2_1" />
@@ -394,7 +393,7 @@
     <child link="link_fin1_3" />
     <origin rpy="0 0 0" xyz="0 0.035 0" />
     <limit lower="-1.570796" upper="1.570796" effort="0.0" velocity="0.0" />
-  </joint>  
+  </joint>
   <joint name="joint7" type="revolute">
     <axis xyz="1 0.0 0.0" />
     <parent link="link_fin1_3" />

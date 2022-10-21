@@ -5,21 +5,33 @@
       <robotNamespace>/</robotNamespace>
     </plugin>
   </gazebo>
+  <material name="blue">
+    <color rgba="0.0 0.0 1.0 2.0"/>
+  </material>
+  <material name="white">
+    <color rgba="1.0 1.0 1.0 2.0"/>
+  </material>
+  <material name="black">
+    <color rgba="0 0 0 2.0"/>
+  </material>
+
   <link name="base_link">
     <visual>
       <geometry>
-        <cylinder length="0.06" radius="0.025" />
+	<mesh filename="package://k3hand_ros/urdf/hand/palm.stl"/>
+        <!-- <cylinder length="0.06" radius="0.025" /> -->
       </geometry>
+      <origin xyz="0 0 0" rpy="0 0 3.1415"/>
     </visual>
     <collision>
       <geometry>
         <cylinder length="0.06" radius="0.025" />
       </geometry>
     </collision>
-    <inertial>
-      <mass value="10"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
-    </inertial>
+    <!-- <inertial> -->
+    <!--   <mass value="10"/> -->
+    <!--   <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/> -->
+    <!-- </inertial> -->
   </link>
   <link name="link_fin1_1">
     <visual>
@@ -99,7 +111,8 @@
   <link name="link_fin2_1">
     <visual>
       <geometry>
-        <box size="0.020 0.030 0.012" />
+	<mesh filename="package://k3hand_ros/urdf/hand/link_fin1_1.stl"/>
+        <!-- <box size="0.020 0.030 0.012" /> -->
       </geometry>
       <origin xyz="-0.005 -0.010 0.0" />
     </visual>

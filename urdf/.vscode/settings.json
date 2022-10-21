@@ -6,5 +6,7 @@
     "python.analysis.extraPaths": [
         "/home/mech-user/my_ws/devel/lib/python2.7/dist-packages",
         "/opt/ros/melodic/lib/python2.7/dist-packages"
-    ]
+    ],
+    "ros.rosSetupScript": "source ~/my_ws/devel/setup.bash",
+    "cmake.configureOnOpen": true
 }
