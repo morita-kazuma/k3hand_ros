@@ -6,22 +6,30 @@
     </plugin>
   </gazebo>
   <material name="blue">
-    <color rgba="0.0 0.0 1.0 2.0"/>
+    <color rgba="0.0 0.0 1.0 1.0" />
   </material>
   <material name="white">
-    <color rgba="1.0 1.0 1.0 2.0"/>
+    <color rgba="1.0 1.0 1.0 1.0" />
   </material>
   <material name="black">
-    <color rgba="0 0 0 2.0"/>
+    <color rgba="0.0 0.0 0.0 1.0" />
   </material>
 
-  <link name="base_link">
+  <link name="base_link" />
+  <joint name="base2wrist" type="fixed">
+    <parent link="base_link" />
+    <child link="wrist" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+
+  <link name="wrist">
     <visual>
       <geometry>
-	<mesh filename="package://k3hand_ros/urdf/hand/palm.stl"/>
+        <mesh filename="package://k3hand_ros/urdf/k3_urdf/wrist.dae" />
         <!-- <cylinder length="0.06" radius="0.025" /> -->
       </geometry>
-      <origin xyz="0 0 0" rpy="0 0 3.1415"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
     </visual>
     <collision>
       <geometry>
@@ -33,12 +41,12 @@
     <!--   <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/> -->
     <!-- </inertial> -->
   </link>
-  <link name="link_fin1_1">
+  <link name="thumb_met">
     <visual>
       <geometry>
-        <box size="0.0225 0.035 0.012" />
+        <mesh filename="package://k3hand_ros/urdf/k3_urdf/thumb_met.dae" />
       </geometry>
-      <origin xyz="0.0 0.015 0.0" />
+      <origin xyz="0.0 0.0 0.0" />
     </visual>
     <collision>
       <geometry>
@@ -47,16 +55,16 @@
       <origin xyz="0.0 0.015 0.0" />
     </collision>
     <inertial>
-      <mass value="10"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <mass value="10" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
     </inertial>
   </link>
-  <link name="link_fin1_2">
+  <link name="thumb_middle_1">
     <visual>
       <geometry>
-        <box size="0.0225 0.045 0.012" />
+        <mesh filename="package://k3hand_ros/urdf/k3_urdf/thumb_middle_1.dae" />
       </geometry>
-      <origin xyz="0.0 0.0175 0.0" />
+      <origin xyz="0.0 0.0 0.0" />
     </visual>
     <collision>
       <geometry>
@@ -65,16 +73,16 @@
       <origin xyz="0.0 0.0175 0.0" />
     </collision>
     <inertial>
-      <mass value="10"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <mass value="10" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
     </inertial>
   </link>
-  <link name="link_fin1_3">
+  <link name="thumb_middle_2">
     <visual>
       <geometry>
-        <box size="0.0225 0.045 0.012" />
+        <mesh filename="package://k3hand_ros/urdf/k3_urdf/thumb_middle_2.dae" />
       </geometry>
-      <origin xyz="0.0 0.0175 0.0" />
+      <origin xyz="0.0 0.0 0.0" />
     </visual>
     <collision>
       <geometry>
@@ -83,18 +91,18 @@
       <origin xyz="0.0 0.0175 0.0" />
     </collision>
     <inertial>
-      <mass value="10"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <mass value="10" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
     </inertial>
   </link>
 
 
-  <link name="link_fin1_4">
+  <link name="thumb_tip">
     <visual>
       <geometry>
-        <box size="0.0225 0.040 0.012" />
+        <mesh filename="package://k3hand_ros/urdf/k3_urdf/thumb_tip.dae" />
       </geometry>
-      <origin xyz="0.0 0.015 0.0" />
+      <origin xyz="0.0 0.0 0.0" />
     </visual>
     <collision>
       <geometry>
@@ -103,18 +111,18 @@
       <origin xyz="0.0 0.015 0.0" />
     </collision>
     <inertial>
-      <mass value="10"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <mass value="10" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
     </inertial>
   </link>
- 
-  <link name="link_fin2_1">
+
+  <link name="fing_met_1">
     <visual>
       <geometry>
-	<mesh filename="package://k3hand_ros/urdf/hand/link_fin1_1.stl"/>
+        <mesh filename="package://k3hand_ros/urdf/k3_urdf/fing_met_1.dae" />
         <!-- <box size="0.020 0.030 0.012" /> -->
       </geometry>
-      <origin xyz="-0.005 -0.010 0.0" />
+      <origin xyz="0.022 0.0175 0.00" rpy="0.0 0.0 0.0" />
     </visual>
     <collision>
       <geometry>
@@ -124,16 +132,16 @@
     </collision>
 
     <inertial>
-      <mass value="10"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <mass value="10" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
     </inertial>
   </link>
-  <link name="link_fin2_2">
+  <link name="fing_middle_1">
     <visual>
       <geometry>
-        <box size="0.020 0.120 0.012" />
+        <mesh filename="package://k3hand_ros/urdf/k3_urdf/fing_middle_1.dae" />
       </geometry>
-      <origin xyz="0.005 -0.050 0.0" />
+      <origin xyz="0.0 0.0 0.0" />
     </visual>
     <collision>
       <geometry>
@@ -142,17 +150,17 @@
       <origin xyz="0.005 -0.050 0.0" />
     </collision>
     <inertial>
-      <mass value="10"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <mass value="10" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
     </inertial>
   </link>
 
-  <link name="link_fin3_1">
+  <link name="fing_met_2">
     <visual>
       <geometry>
-        <box size="0.020 0.030 0.012" />
+        <mesh filename="package://k3hand_ros/urdf/k3_urdf/fing_met_2.dae" />
       </geometry>
-      <origin xyz="0.005 -0.010 0.0" />
+      <origin xyz="0.0 0.0 0.0" />
     </visual>
     <collision>
       <geometry>
@@ -161,16 +169,16 @@
       <origin xyz="0.005 -0.010 0.0" />
     </collision>
     <inertial>
-      <mass value="10"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <mass value="10" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
     </inertial>
   </link>
-  <link name="link_fin3_2">
+  <link name="fing_middle_2">
     <visual>
       <geometry>
-        <box size="0.020 0.120 0.012" />
+        <mesh filename="package://k3hand_ros/urdf/k3_urdf/fing_middle_2.dae" />
       </geometry>
-      <origin xyz="-0.005 -0.050 0.0" />
+      <origin xyz="0.0 0.0 0.0" />
     </visual>
     <collision>
       <geometry>
@@ -179,42 +187,42 @@
       <origin xyz="-0.005 -0.050 0.0" />
     </collision>
     <inertial>
-      <mass value="10"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <mass value="10" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
     </inertial>
   </link>
   <joint name="joint0" type="revolute">
-    <axis xyz="0.0 0.0 1.0" />
-    <parent link="base_link" />
-    <child link="link_fin2_1" />
-    <origin xyz="0.020 -0.015 0.020" rpy="0.0 0.0 1.570796" />
+    <axis xyz="0.0 1.0 0.0" />
+    <parent link="wrist" />
+    <child link="fing_met_1" />
+    <origin xyz="0.0225 -0.0175 0.00" rpy="0.0 1.570796 0.0" />
     <limit lower="-1.570796" upper="0.523599" effort="0.0" velocity="0.0" />
-  </joint>  
+  </joint>
   <joint name="joint1" type="revolute">
     <axis xyz="1.0 0.0 0" />
-    <parent link="link_fin2_1" />
-    <child link="link_fin2_2" />
+    <parent link="fing_met_1" />
+    <child link="fing_middle_1" />
     <origin xyz="0.000 -0.020 0.0" rpy="-1.570796 0.0 0.0" />
     <limit lower="-1.570796" upper="1.579796" effort="0.0" velocity="0.0" />
   </joint>
   <joint name="joint2" type="revolute">
     <axis xyz="0.0 0.0 1.0" />
-    <parent link="base_link" />
-    <child link="link_fin3_1" />
+    <parent link="wrist" />
+    <child link="fing_met_2" />
     <origin xyz="-0.020 -0.015 0.020" rpy="0.0 0.0 -1.570796" />
     <limit lower="-0.523599" upper="1.570796" effort="0.0" velocity="0.0" />
   </joint>
   <joint name="joint3" type="revolute">
     <axis xyz="-1.0 0.0 0" />
-    <parent link="link_fin3_1" />
-    <child link="link_fin3_2" />
+    <parent link="fing_met_2" />
+    <child link="fing_middle_2" />
     <origin xyz="0.000 -0.020 0.0" rpy="-1.570796 0.0 0.0" />
     <limit lower="-1.570796" upper="1.570796" effort="0.0" velocity="0.0" />
   </joint>
   <joint name="joint4" type="revolute">
     <axis xyz="0.0 0 -1" />
-    <parent link="base_link" />
-    <child link="link_fin1_1" />
+    <parent link="wrist" />
+    <child link="thumb_met" />
     <origin rpy="0.78537 0 0" xyz="0 0.02 0" />
     <limit lower="-1.570796" upper="1.570796" effort="30.0" velocity="1.0" />
   </joint>
@@ -229,23 +237,23 @@
   </transmission>
   <joint name="joint5" type="revolute">
     <axis xyz="1 0.0 0.0" />
-    <parent link="link_fin1_1" />
-    <child link="link_fin1_2" />
-    <origin rpy="-0.78537 0 0" xyz="0 0.0275 0" />
+    <parent link="thumb_met" />
+    <child link="thumb_middle_1" />
+    <origin rpy="-0.78537 0 0" xyz="0 0.0 0" />
     <limit lower="-0.8726646" upper="2.268928" effort="0.0" velocity="0.0" />
   </joint>
   <joint name="joint6" type="revolute">
     <axis xyz="1 0.0 0.0" />
-    <parent link="link_fin1_2" />
-    <child link="link_fin1_3" />
-    <origin rpy="0 0 0" xyz="0 0.035 0" />
+    <parent link="thumb_middle_1" />
+    <child link="thumb_middle_2" />
+    <origin rpy="0 0 0" xyz="0 0.0 0" />
     <limit lower="-1.570796" upper="1.570796" effort="0.0" velocity="0.0" />
-  </joint>  
+  </joint>
   <joint name="joint7" type="revolute">
     <axis xyz="1 0.0 0.0" />
-    <parent link="link_fin1_3" />
-    <child link="link_fin1_4" />
-    <origin rpy="0 0 0" xyz="0 0.035 0" />
+    <parent link="thumb_middle_2" />
+    <child link="thumb_tip" />
+    <origin rpy="0 0 0" xyz="0 0 0" />
     <limit lower="-1.570796" upper="1.570796" effort="0.0" velocity="0.0" />
   </joint>
 
